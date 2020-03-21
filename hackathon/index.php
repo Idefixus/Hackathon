@@ -48,13 +48,13 @@ $mysqli->close();
 .search-container {
 	
 	position: absolute;
-	TOP: 400px;
-	left:40%;
+	TOP: 40%;
+	left:35%;
 	
 }
 
 body {
-	background-image: url('Hackathonlogo.png');
+	background-image: url('Pics/Hackathonlogo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -64,7 +64,7 @@ body {
 	width: 400px;
 	border: 1px solid black;
 	border-radius: 3px;
-	transition: all ease 5s;
+	transition: all ease 0.5s;
 	
 	
 }
@@ -79,7 +79,7 @@ body {
 	border: 1px solid black;
 	border-radius: 3px;
 	cursor: pointer;
-	transition: all ease 2s;
+	transition: all ease 0.5s;
 }
 
 .search-container button:hover {
@@ -88,9 +88,58 @@ body {
 }
 
 h1 {
+	text-align: center;
 	position: absolute;
 	left: 22%;
-	top: 300px;
+	top: 30%;
+}
+
+img {
+	position: absolute;
+	top: 475px;
+	left: -118%;
+}
+
+.hoverblock {
+	background-color=blue;
+	padding: 20px;
+	display: none;
+}
+
+
+img:hover + .hoverblock {
+	display: block;
+	
+}
+
+p1 {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 32%;
+	font-size:120%
+	
+}
+
+.submitquestion button {
+	margin: 2em;
+	padding: .5em 1em;
+	width: 300px;
+	background: transparent;
+	color: black;
+	border: 1px solid black;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all ease 2s;
+	font-size: 120%;
+	position: absolute;
+	top: 60%;
+	left: -125px;
+}
+
+.submitquestion button:hover {
+	background: darkblue;
+	color: white;
 }
 
 </style>
@@ -101,13 +150,22 @@ h1 {
 </head>
  
 <body>
-<h1>Du möchtest dich über Fakenews informieren: Versuch es mit einem Stichwort zu einem Thema welches dich interessiert</h1>
+<h1>Du möchtest dich über Corona informieren? <br> Versuch es mit einem Stichwort zu einem Thema welches dich interessiert</h1>
  
   <div class="search-container">
     <form action="">
       <input type="text" id="search" placeholder="Gib bitte dein Stichwort ein.." name="search">
       <button type = "submit" id="search">Search</button>
     </form>
+	<img src="pics/Effekt.png" id = "germandot" height = "100">
   </div>
+  <div class="hoverblock">I will show on hover</div>
+  <p1>Oder wenn du der Community helfen magst, beantworte Fragen deiner Wahl!<p1>
+<div class="submitquestion">  
+  <form method="get" action="/hackathon/alle_fragen.php">
+	<button type = "submit" id="search">Beantworte Fragen</button>
+  </form>
+</div>
+  
 </body>
 </html>

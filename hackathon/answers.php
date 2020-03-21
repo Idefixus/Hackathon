@@ -8,49 +8,13 @@ body {
 	background-size: cover;
 }
 
-
-.downvote button {
-	background:url(Downvote.png) no-repeat;
-	cursor: pointer;
-	width:135px;
-	height:145px;
-	border: none;
-	position: absolute;
-	top: 60%;
-	left: 50%;
-
-}
-
-.downvote button:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.upvote button {
-	background:url(Upvote.png) no-repeat;
-	cursor: pointer;
-	width:135px;
-	height:145px;
-	border: none;
-	position: absolute;
-	top: 60%;
-	left: 30%;
-
-}
-
-.upvote button:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-
 h1 {
 	position: absolute;
 	left: 15%;
 	top: 10%;
 }
 
-table {
 
-}
 .answertable #answertable{
 
 	display: block;
