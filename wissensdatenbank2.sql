@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 21. Mrz 2020 um 15:54
+-- Erstellungszeit: 21. Mrz 2020 um 16:13
 -- Server-Version: 10.4.11-MariaDB
 -- PHP-Version: 7.2.28
 
@@ -40,6 +40,14 @@ CREATE TABLE `antworten` (
   `Frage_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Daten für Tabelle `antworten`
+--
+
+INSERT INTO `antworten` (`ID`, `Antworttext`, `Quelle`, `Upvote`, `Downvote`, `Serioes`, `Frage_ID`) VALUES
+(1, 'Der Effekt von Ibuprofen auf den Coronavirus ist aktuell noch unbekannt. ', 'https://www.tagesschau.de/faktenfinder/corona-ibuprofen-101.html', NULL, NULL, NULL, 1),
+(2, 'Nein eine Ausgangssperre ist völlig unbedenklich. Es ist wichtig seinen wöchentlichen Alkoholkonsum aufrecht zu erhalten.', 'https://www.der-postillon.com/2020/03/ausgangssperre.html', NULL, 1, NULL, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +58,14 @@ CREATE TABLE `fragen` (
   `ID` int(11) NOT NULL,
   `Fragestellung` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Daten für Tabelle `fragen`
+--
+
+INSERT INTO `fragen` (`ID`, `Fragestellung`) VALUES
+(1, 'Verschlimmert Ibuprofen die Symptome von Corona?'),
+(2, 'Kann ich während der Ausgangssperre trotzdem in den Biergarten gehen?');
 
 -- --------------------------------------------------------
 
@@ -62,6 +78,14 @@ CREATE TABLE `keywords` (
   `Keyword` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Daten für Tabelle `keywords`
+--
+
+INSERT INTO `keywords` (`ID`, `Keyword`) VALUES
+(1, 'Ausgangssperre'),
+(2, 'Ibuprofen');
+
 -- --------------------------------------------------------
 
 --
@@ -72,6 +96,14 @@ CREATE TABLE `mapping key:frage` (
   `ID_Frage` int(11) NOT NULL,
   `ID_Keyword` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Daten für Tabelle `mapping key:frage`
+--
+
+INSERT INTO `mapping key:frage` (`ID_Frage`, `ID_Keyword`) VALUES
+(1, 2),
+(2, 1);
 
 --
 -- Indizes der exportierten Tabellen
@@ -111,19 +143,19 @@ ALTER TABLE `mapping key:frage`
 -- AUTO_INCREMENT für Tabelle `antworten`
 --
 ALTER TABLE `antworten`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT für Tabelle `fragen`
 --
 ALTER TABLE `fragen`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT für Tabelle `keywords`
 --
 ALTER TABLE `keywords`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints der exportierten Tabellen
