@@ -124,179 +124,94 @@ button {
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Eure erster PHP-Script</title> 
+	<title>Detail Page</title> 
 </head>
  
 <body>
-<h1>Ist Ibuprofen gefährlich bei Corona?</h1>
+
+<?php
+// Get the question
+
+// Connect to database
+	$mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
+
+	/* check connection */
+	if ($mysqli->connect_errno) {
+		printf("Connect failed: %s\n", $mysqli->connect_error);
+		exit();
+	}
+	function printf_array($format, $arr) 
+{ 
+    return call_user_func_array('printf', array_merge((array)$format, $arr)); 
+}
+
+	// Get the question:
+	$fragen_id = $_GET['fragen_id'];
+
+	$query = "SELECT * From fragen where ID = $fragen_id";
+
+	// Print the answers
+	if ($result = $mysqli->query($query)) {
+		$row = $result->fetch_assoc();
+		// Create a div with the question
+		$fragestellung = $row['Fragestellung'];
+		echo "<div id='question'><h1><b>$fragestellung</b></h1></div>";
+
+		$result->close();
+	}
+
+	?>
 
 <div class="answertable"> 
 	<table id="answertable">
-  <tr>
-  	<td>
-	<div class="votetable">
-	<table id ="votetable">
-	<tr>
-    <td><button id="upvote_0" class="arrow up" onclick="vote(1, this.id)"></button></td>
-    </tr>
-	<tr> 
-	<td align="center"><div class="number"><text id="number"><b id="score_0" style="font-size:20px">0</b></text></div></td>
-	</tr>
-	<tr>
-    <td><button id="downvote_0" class="arrow down" onclick="vote(-1, this.id)"></button></td>
-	</tr>
-	</table>
-	</div>
-	</td>
-	<td><img id="button_image_0" width="40" height="80" src="PNG/reagenzglas_teils.png"></td>	
-    <td>Ibuprofen wurde vom Robert-Koch-Institut als gefährlich eingestuft während man unter Covid-19 leidet.</td>
-    <td><a href=“https//www.rki.de“>www.rki.de</a></td>
-  </tr>
-  <tr>
-    	<td>
-	<div class="votetable">
-	<table id ="votetable">
-	<tr>
-    <td><button id="upvote_1" class="arrow up" onclick="vote(1, this.id)"></button></td>
-    </tr>
-	<tr> 
-	<td align="center"><div class="number"><text id="number"><b id="score_1" style="font-size:20px">0</b></text></div></td>
-	</tr>
-	<tr>
-    <td><button id="downvote_1" class="arrow down" onclick="vote(-1, this.id)"></button></td>
-	</tr>
-	</table>
-	</div>
-	</td>
-	<td><img id="button_image_1" width="40" height="80" src="PNG/reagenzglas_teils.png"></td>
-    <td>...</td>
-    <td>...</td>
-	<td>...</td>
-  </tr>
-    <tr>
-	  	<td>
-	<div class="votetable">
-	<table id ="votetable">
-	<tr>
-    <td><button id="upvote" class="arrow up"></button></td>
-    </tr>
-	<tr> 
-	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
-	</tr>
-	<tr>
-    <td><button id="downvote" class="arrow down"></button></td>
-	</tr>
-	</table>
-	</div>
-	</td>
-    <td>...</td>
-    <td>...</td>
-	<td>...</td>
-  </tr>
-    <tr>
-	  	<td>
-	<div class="votetable">
-	<table id ="votetable">
-	<tr>
-    <td><button id="upvote" class="arrow up"></button></td>
-    </tr>
-	<tr> 
-	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
-	</tr>
-	<tr>
-    <td><button id="downvote" class="arrow down"></button></td>
-	</tr>
-	</table>
-	</div>
-	</td>
-    <td>...</td>
-    <td>...</td>
-	<td>...</td>
-  </tr>
-    <tr>
-	  	<td>
-	<div class="votetable">
-	<table id ="votetable">
-	<tr>
-    <td><button id="upvote" class="arrow up"></button></td>
-    </tr>
-	<tr> 
-	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
-	</tr>
-	<tr>
-    <td><button id="downvote" class="arrow down"></button></td>
-	</tr>
-	</table>
-	</div>
-	</td>
-    <td>...</td>
-    <td>...</td>
-	<td>...</td>
-  </tr>  <tr>
-    	<td>
-	<div class="votetable">
-	<table id ="votetable">
-	<tr>
-    <td><button id="upvote" class="arrow up"></button></td>
-    </tr>
-	<tr> 
-	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
-	</tr>
-	<tr>
-    <td><button id="downvote" class="arrow down"></button></td>
-	</tr>
-	</table>
-	</div>
-	</td>
-    <td>...</td>
-    <td>...</td>
-	<td>...</td>
-  </tr>  <tr>
-    	<td>
-	<div class="votetable">
-	<table id ="votetable">
-	<tr>
-    <td><button id="upvote" class="arrow up"></button></td>
-    </tr>
-	<tr> 
-	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
-	</tr>
-	<tr>
-    <td><button id="downvote" class="arrow down"></button></td>
-	</tr>
-	</table>
-	</div>
-	</td>
-    <td>...</td>
-    <td>...</td>
-	<td>...</td>
-  </tr>
-    <tr>
-    <td>...</td>
-    <td>...</td>
-	<td>...</td>
-  </tr>
-    <tr>
-    <td>...</td>
-    <td>...</td>
-	<td>...</td>
-  </tr>
-    <tr>
-    <td>...</td>
-    <td>...</td>
-	<td>...</td>
-  </tr>
-  </table>
+
+<?php
+
+
+$query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle From fragen join antworten where fragen.id = antworten.Frage_ID and fragen.ID = $fragen_id ";
+
+	// Print the answers
+	if ($result = $mysqli->query($query)) {
+
+		/* fetch associative array */
+		while ($row = $result->fetch_assoc()) {
+			$id = $row['antwort_id'];
+			$answer = $row['Antworttext'];
+			$quelle = $row['Quelle'];
+			
+	echo "<tr>
+		<td>
+			<div class='votetable'>
+			<table id ='votetable'>
+			<tr>
+			<td><button id='upvote_$id' class='arrow up' onclick='vote(1, this.id)'></button></td>
+			</tr>
+			<tr> 
+			<td align='center'><div class='number'><text id='number'><b id='score_$id' style='font-size:20px'>0</b></text></div></td>
+			</tr>
+			<tr>
+			<td><button id='downvote_$id' class='arrow down' onclick='vote(-1, this.id)'></button></td>
+			</tr>
+			</table>
+			</div>
+		</td>";
+		echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_teils.png'></td>";
+		echo "<td>$answer</td>";
+		echo "<td><a target='_blank' href='$quelle'>$quelle</a></td>";
+		echo "</tr>";
+}
+/* free result set */
+$result->close();
+}
+
+$mysqli->close();	
+ 
+ ?>
+ 
+</table>
 
 </div>
 
-
-	
-	
-	
-
-
- 
 	<script src="upvote.js"></script>
   
   

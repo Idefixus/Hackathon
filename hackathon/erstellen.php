@@ -4,13 +4,13 @@
 .search-container {
 	
 	position: absolute;
-	TOP: 40%;
-	left:30%;
+	TOP: 400px;
+	left:40%;
 	
 }
 
 body {
-	background-image: url('Pics/Hackathonlogo.png');
+	background-image: url('Hackathonlogo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -100,38 +100,37 @@ if (isset($_GET['frage']) && isset($_GET['keyword'])){
 					}
 				} while ($mysqli->next_result());
 			}
-		}
-	}
-	else {
-	/* execute multi query */
-	/* Multi keywords: INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, 'Keyword2');
-SET @key_keyword2 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = 'Keyword2' ); 
-INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, 'Keyword3');
-SET @key_keyword3 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = 'Keyword3' );  */
 
-		$query = "INSERT INTO `fragen` (`ID`, `Fragestellung`) VALUES (NULL, '$frage'); 
-		SET @key_frage = (SELECT `ID` FROM `fragen` WHERE `Fragestellung` = '$frage' );
-		INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, '$keyword'); 
-		SET @key_keyword1 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = '$keyword' );
-		INSERT INTO `mapping key:frage` (`ID_Frage`, `ID_Keyword`) VALUES (@key_frage, @key_keyword1);
-		";
-		if ($mysqli->multi_query($query)) {
-			do {
-				/* store first result set */
-				if ($result = $mysqli->store_result()) {
-					while ($row = $result->fetch_row()) {
-						//printf("%s\n", $row[0]);
+		}
+		else {
+
+			/* execute multi query */
+
+			$query = "INSERT INTO `fragen` (`ID`, `Fragestellung`) VALUES (NULL, '$frage'); 
+			SET @key_frage = (SELECT `ID` FROM `fragen` WHERE `Fragestellung` = '$frage' );
+			INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, '$keyword'); 
+			SET @key_keyword1 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = '$keyword' );
+			INSERT INTO `mapping key:frage` (`ID_Frage`, `ID_Keyword`) VALUES (@key_frage, @key_keyword1);
+			";
+			if ($mysqli->multi_query($query)) {
+				do {
+					/* store first result set */
+					if ($result = $mysqli->store_result()) {
+						while ($row = $result->fetch_row()) {
+							//printf("%s\n", $row[0]);
+						}
+						$result->free();
 					}
-					$result->free();
-				}
-				/* print divider */
-				if ($mysqli->more_results()) {
-					//printf("-----------------\n");
-				}
-			} while ($mysqli->next_result());
-		}
+					/* print divider */
+					if ($mysqli->more_results()) {
+						//printf("-----------------\n");
+					}
+				} while ($mysqli->next_result());
+			}
 
-}	
+		}	
+	}
+
 	
 	echo "<h1>Deine Frage $frage wurde erfolgreich hinzugefügt, danke dass du einen Beitrag leistest!</h1>";
 }
@@ -144,7 +143,7 @@ else{
   <div class="search-container">
     <form action="">
       <input type="text" placeholder="Gib bitte eine Frage ein." name="frage">
-	  <input type="text" placeholder="Gib bitte dein Stichwort ein." name="keyword">
+	  <input type="text" placeholder="Gib bitte dein Keyword ein." name="keyword">
 	  <!--<input type="text" placeholder="Gib bitte dein zweites Keyword ein." name="keyword2">-->
 	  <!--<input type="text" placeholder="Gib bitte dein drittes Keyword ein." name="keyword3">-->
       <button type = "submit" id="insert">Einfügen</button>

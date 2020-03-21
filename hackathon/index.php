@@ -48,13 +48,13 @@ $mysqli->close();
 .search-container {
 	
 	position: absolute;
-	TOP: 40%;
-	left:35%;
+	TOP: 400px;
+	left:40%;
 	
 }
 
 body {
-	background-image: url('Pics/Hackathonlogo.png');
+	background-image: url('Hackathonlogo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -64,7 +64,7 @@ body {
 	width: 400px;
 	border: 1px solid black;
 	border-radius: 3px;
-	transition: all ease 0.5s;
+	transition: all ease 5s;
 	
 	
 }
@@ -79,7 +79,7 @@ body {
 	border: 1px solid black;
 	border-radius: 3px;
 	cursor: pointer;
-	transition: all ease 0.5s;
+	transition: all ease 2s;
 }
 
 .search-container button:hover {
@@ -88,28 +88,9 @@ body {
 }
 
 h1 {
-	text-align: center;
 	position: absolute;
 	left: 22%;
 	top: 300px;
-}
-
-img {
-	position: absolute;
-	top: 475px;
-	left: -118%;
-}
-
-.hoverblock {
-	background-color=blue;
-	padding: 20px;
-	display: none;
-}
-
-
-img:hover + .hoverblock {
-	display: block;
-	
 }
 
 </style>
@@ -120,16 +101,13 @@ img:hover + .hoverblock {
 </head>
  
 <body>
-<h1>Du möchtest dich über Fakenews informieren: <br> Versuch es mit einem Stichwort zu einem Thema welches dich interessiert</h1>
+<h1>Du möchtest dich über Fakenews informieren: Versuch es mit einem Stichwort zu einem Thema welches dich interessiert</h1>
  
   <div class="search-container">
     <form action="">
       <input type="text" id="search" placeholder="Gib bitte dein Stichwort ein.." name="search">
       <button type = "submit" id="search">Search</button>
     </form>
-	<img src="pics/Effekt.png" id = "germandot" height = "100">
   </div>
-  <div class="hoverblock">I will show on hover</div>
-  
 </body>
 </html>
