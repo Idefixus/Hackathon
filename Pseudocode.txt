@@ -1,0 +1,23 @@
+abfragen(neueFrage):
+	wenn neueFrage in Fragen.Fragestellung:
+		return Antworten(neueFrage)
+
+	sonst:
+		generiere Keyword aus neueFrage (einfachste Version: Keywords eingeben durch User)
+
+		wenn neueFrage.Keywords enthalten in Keywords:
+
+			mache Vorschläge für exitierende Fragestellung
+
+			wenn existierende Fragestellung übereinstimmt:
+				return Antworten(existierender Fragestellung)
+
+			sonst: 
+				füge neueFrage in Fragen hinzu	
+		sonst:
+			füge neueFrage in Fragen hinzu
+		
+
+
+einfügen(Antworttext, Fragestellung):
+	einfügen Antworttext in Antworten mit Frage_Id == Fragestellung.Id

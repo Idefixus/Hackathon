@@ -1,0 +1,34 @@
+CREATE TABLE Fragen
+(
+  Id INT NOT NULL,
+  Fragestellung VARCHAR NOT NULL,
+  PRIMARY KEY (Id)
+);
+
+CREATE TABLE Antworten
+(
+  Antworttext VARCHAR NOT NULL,
+  Quelle VARCHAR NOT NULL,
+  Upvotes INT NOT NULL,
+  Downvotes INT NOT NULL,
+  Serioes INT NOT NULL,
+  Id INT NOT NULL,
+  Frage_Id INT NOT NULL,
+  PRIMARY KEY (Id),
+  FOREIGN KEY (Frage_Id) REFERENCES Fragen(Id)
+);
+
+CREATE TABLE Keywords
+(
+  Keyword VARCHAR NOT NULL,
+  Id INT NOT NULL,
+  PRIMARY KEY (Id)
+);
+
+CREATE TABLE Mapping_Key_-_Frage
+(
+  Id_Frage INT NOT NULL,
+  Id_Keyword INT NOT NULL,
+  FOREIGN KEY (Id_Frage) REFERENCES Fragen(Id),
+  FOREIGN KEY (Id_Keyword) REFERENCES Keywords(Id)
+);
