@@ -95,8 +95,8 @@ if (isset($_GET['frage'])){
  
  <table id="questiontable">
   <tr>
-    <th>Question</th>
-    <th>Upvotes/Downvotes</th>
+    <th>ID</th>
+    <th>Frage</th>
 	<th>Reagenzglass</th>
   </tr>
 	<?php //Table for all the results

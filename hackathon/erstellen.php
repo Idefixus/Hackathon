@@ -100,38 +100,37 @@ if (isset($_GET['frage']) && isset($_GET['keyword'])){
 					}
 				} while ($mysqli->next_result());
 			}
-		}
-	}
-	else {
-	/* execute multi query */
-	/* Multi keywords: INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, 'Keyword2');
-SET @key_keyword2 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = 'Keyword2' ); 
-INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, 'Keyword3');
-SET @key_keyword3 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = 'Keyword3' );  */
 
-		$query = "INSERT INTO `fragen` (`ID`, `Fragestellung`) VALUES (NULL, '$frage'); 
-		SET @key_frage = (SELECT `ID` FROM `fragen` WHERE `Fragestellung` = '$frage' );
-		INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, '$keyword'); 
-		SET @key_keyword1 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = '$keyword' );
-		INSERT INTO `mapping key:frage` (`ID_Frage`, `ID_Keyword`) VALUES (@key_frage, @key_keyword1);
-		";
-		if ($mysqli->multi_query($query)) {
-			do {
-				/* store first result set */
-				if ($result = $mysqli->store_result()) {
-					while ($row = $result->fetch_row()) {
-						//printf("%s\n", $row[0]);
+		}
+		else {
+
+			/* execute multi query */
+
+			$query = "INSERT INTO `fragen` (`ID`, `Fragestellung`) VALUES (NULL, '$frage'); 
+			SET @key_frage = (SELECT `ID` FROM `fragen` WHERE `Fragestellung` = '$frage' );
+			INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, '$keyword'); 
+			SET @key_keyword1 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = '$keyword' );
+			INSERT INTO `mapping key:frage` (`ID_Frage`, `ID_Keyword`) VALUES (@key_frage, @key_keyword1);
+			";
+			if ($mysqli->multi_query($query)) {
+				do {
+					/* store first result set */
+					if ($result = $mysqli->store_result()) {
+						while ($row = $result->fetch_row()) {
+							//printf("%s\n", $row[0]);
+						}
+						$result->free();
 					}
-					$result->free();
-				}
-				/* print divider */
-				if ($mysqli->more_results()) {
-					//printf("-----------------\n");
-				}
-			} while ($mysqli->next_result());
-		}
+					/* print divider */
+					if ($mysqli->more_results()) {
+						//printf("-----------------\n");
+					}
+				} while ($mysqli->next_result());
+			}
 
-}	
+		}	
+	}
+
 	
 	echo "<h1>Deine Frage $frage wurde erfolgreich hinzugefügt, danke dass du einen Beitrag leistest!</h1>";
 }
