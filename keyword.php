@@ -45,7 +45,7 @@ body {
 
 h1 {
 	position: absolute;
-	left: 45%;
+	left: 22%;
 	top: 300px;
 }
 
@@ -58,11 +58,11 @@ h1 {
 </head>
  
 <body>
-<h1>Fragen gegen Corona</h1>
+<h1>Leider haben wir keine passende Frage gefunden. Vielleicht versuch es mit einem Stichwort</h1>
  
   <div class="search-container">
-    <form method="get" action="http://google.de">
-      <input type="text" placeholder="Gib deine Frage ein.." name="search">
+    <form action="/keyword.php">
+      <input type="text" placeholder="Gib bitte dein Stichwort ein.." name="search">
       <button type = "submit" id="search">Search</button>
     </form>
   </div>
