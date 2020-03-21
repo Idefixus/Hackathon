@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-03-21T08:32:24.672Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0" etag="PTvw1iNvpDqtpkouC3SZ" version="12.8.8" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2020-03-21T08:40:06.048Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0" etag="vpzXP5LxO8u1THpurSVR" version="12.8.8" type="github" pages="4">
   <diagram id="ytf-1EmNFGTQWpPhBcvl" name="Aufbau">
     <mxGraphModel dx="1422" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -71,7 +71,7 @@
       <root>
         <mxCell id="EnMxJWWe04FooDxVWhdP-0" />
         <mxCell id="EnMxJWWe04FooDxVWhdP-1" parent="EnMxJWWe04FooDxVWhdP-0" />
-        <mxCell id="Rd_o8mbJAQ4iN04CSc1N-4" value="&lt;table style=&quot;width: 100% ; height: 100% ; border-collapse: collapse&quot; width=&quot;100%&quot; cellpadding=&quot;4&quot; border=&quot;1&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;background-color: #a7c942 ; color: #ffffff ; border: 1px solid #98bf21&quot;&gt;&lt;th align=&quot;left&quot;&gt;Frage&lt;br&gt;&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Keywords&lt;br&gt;&lt;/th&gt;&lt;td&gt;Antworten&lt;br&gt;&lt;/td&gt;&lt;th align=&quot;left&quot;&gt;Quelle&lt;br&gt;&lt;/th&gt;&lt;td&gt;Upvotes&lt;br&gt;&lt;/td&gt;&lt;td&gt;Downvotes&lt;br&gt;&lt;/td&gt;&lt;td&gt;Seriös (ja/nein)&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 1px solid #98bf21&quot;&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background-color: #eaf2d3 ; border: 1px solid #98bf21&quot;&gt;&lt;td&gt;Value 4&lt;/td&gt;&lt;td&gt;Value 5&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Value 6&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 1px solid #98bf21&quot;&gt;&lt;td&gt;Value 7&lt;/td&gt;&lt;td&gt;Value 8&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Value 9&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background-color: #eaf2d3 ; border: 1px solid #98bf21&quot;&gt;&lt;td&gt;Value 10&lt;/td&gt;&lt;td&gt;Value 11&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;Value 12&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;strokeColor=#c0c0c0;fillColor=#ffffff;overflow=fill;rounded=0;" vertex="1" parent="EnMxJWWe04FooDxVWhdP-1">
+        <mxCell id="Rd_o8mbJAQ4iN04CSc1N-4" value="&lt;table style=&quot;width: 100% ; height: 100% ; border-collapse: collapse&quot; width=&quot;100%&quot; cellpadding=&quot;4&quot; border=&quot;1&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;background-color: #a7c942 ; color: #ffffff ; border: 1px solid #98bf21&quot;&gt;&lt;th align=&quot;left&quot;&gt;Frage&lt;br&gt;&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Keywords&lt;br&gt;&lt;/th&gt;&lt;td&gt;Antworten&lt;br&gt;&lt;/td&gt;&lt;th align=&quot;left&quot;&gt;Quelle&lt;br&gt;&lt;/th&gt;&lt;td&gt;Upvotes&lt;br&gt;&lt;/td&gt;&lt;td&gt;Downvotes&lt;br&gt;&lt;/td&gt;&lt;td&gt;Seriös (ja/nein)&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 1px solid #98bf21&quot;&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background-color: #eaf2d3 ; border: 1px solid #98bf21&quot;&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 1px solid #98bf21&quot;&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background-color: #eaf2d3 ; border: 1px solid #98bf21&quot;&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;strokeColor=#c0c0c0;fillColor=#ffffff;overflow=fill;rounded=0;" vertex="1" parent="EnMxJWWe04FooDxVWhdP-1">
           <mxGeometry x="140" y="60" width="576" height="160" as="geometry" />
         </mxCell>
       </root>
@@ -107,10 +107,10 @@
         </mxCell>
         <mxCell id="mEbs2kIHsga6i2tEmN45-14" value="Nein" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="mEbs2kIHsga6i2tEmN45-13">
           <mxGeometry x="-0.3007" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="25" y="-2" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mEbs2kIHsga6i2tEmN45-18" value="Ja" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="W80L4eISgKHy_RKvHzl_-1" source="mEbs2kIHsga6i2tEmN45-7" target="mEbs2kIHsga6i2tEmN45-17">
+        <mxCell id="3ux8OdvoKpoNwSLMUFdw-2" value="Ja" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="W80L4eISgKHy_RKvHzl_-1" source="mEbs2kIHsga6i2tEmN45-7" target="3ux8OdvoKpoNwSLMUFdw-0">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="mEbs2kIHsga6i2tEmN45-7" value="Passende Frage gefunden?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="W80L4eISgKHy_RKvHzl_-1">
@@ -132,10 +132,30 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="mEbs2kIHsga6i2tEmN45-17" value="Antworten werden ausgegeben" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="W80L4eISgKHy_RKvHzl_-1">
-          <mxGeometry x="350" y="584.5" width="100" height="100" as="geometry" />
+          <mxGeometry x="350" y="760" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="mEbs2kIHsga6i2tEmN45-20" value="Upvote System" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="W80L4eISgKHy_RKvHzl_-1">
-          <mxGeometry x="350" y="760" width="100" height="100" as="geometry" />
+          <mxGeometry x="350" y="960" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3ux8OdvoKpoNwSLMUFdw-3" value="Ja" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="W80L4eISgKHy_RKvHzl_-1" source="3ux8OdvoKpoNwSLMUFdw-0" target="mEbs2kIHsga6i2tEmN45-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3ux8OdvoKpoNwSLMUFdw-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="W80L4eISgKHy_RKvHzl_-1" source="3ux8OdvoKpoNwSLMUFdw-0" target="3ux8OdvoKpoNwSLMUFdw-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3ux8OdvoKpoNwSLMUFdw-6" value="Nein" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="3ux8OdvoKpoNwSLMUFdw-5">
+          <mxGeometry x="0.287" relative="1" as="geometry">
+            <mxPoint x="-31" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3ux8OdvoKpoNwSLMUFdw-0" value="Ist die Frage schon beantwortet?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="W80L4eISgKHy_RKvHzl_-1">
+          <mxGeometry x="335" y="550" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3ux8OdvoKpoNwSLMUFdw-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="W80L4eISgKHy_RKvHzl_-1" source="3ux8OdvoKpoNwSLMUFdw-4" target="mEbs2kIHsga6i2tEmN45-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3ux8OdvoKpoNwSLMUFdw-4" value="User kann Frage beantworten" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="W80L4eISgKHy_RKvHzl_-1">
+          <mxGeometry x="645" y="560" width="100" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
