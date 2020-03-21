@@ -5,9 +5,10 @@
 	
 	position: absolute;
 	TOP: 400px;
-	left:40%;
+	left:35%;
 	
 }
+
 
 body {
 	background-image: url('Hackathonlogo.png');
@@ -20,8 +21,7 @@ body {
 	width: 400px;
 	border: 1px solid black;
 	border-radius: 3px;
-	transition: all ease 5s;
-	
+	transition: all ease 5s;	
 	
 }
 
@@ -45,10 +45,15 @@ body {
 
 h1 {
 	position: absolute;
-	left: 45%;
+	left: 40%;
 	top: 300px;
 }
 
+img {
+	position: absolute;
+	top: 475px;
+	left: -118%;
+}
 </style>
 	
 
@@ -65,6 +70,7 @@ h1 {
       <input type="text" placeholder="Gib deine Frage ein.." name="search">
       <button type = "submit" id="search">Search</button>
     </form>
+	<img src="Effekt.png" id = "germandot" height = "100">
   </div>
 </body>
 </html>
