@@ -126,18 +126,18 @@ button {
 	<div class="votetable">
 	<table id ="votetable">
 	<tr>
-    <td><button id="upvote" class="arrow up"></button></td>
+    <td><button id="upvote_0" class="arrow up" onclick="vote(1, this.id)"></button></td>
     </tr>
 	<tr> 
-	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
+	<td align="center"><div class="number"><text id="number"><b id="score_0" style="font-size:20px">0</b></text></div></td>
 	</tr>
 	<tr>
-    <td><button id="downvote" class="arrow down"></button></td>
+    <td><button id="downvote_0" class="arrow down" onclick="vote(-1, this.id)"></button></td>
 	</tr>
 	</table>
 	</div>
 	</td>
-	<td><img id="button_image" width="40" height="80" src="PNG/reagenzglas_teils.png"></td>	
+	<td><img id="button_image_0" width="40" height="80" src="PNG/reagenzglas_teils.png"></td>	
     <td>Ibuprofen wurde vom Robert-Koch-Institut als gefährlich eingestuft während man unter Covid-19 leidet.</td>
     <td><a href=“https//www.rki.de“>www.rki.de</a></td>
   </tr>
@@ -146,17 +146,18 @@ button {
 	<div class="votetable">
 	<table id ="votetable">
 	<tr>
-    <td><button id="upvote" class="arrow up"></button></td>
+    <td><button id="upvote_1" class="arrow up" onclick="vote(1, this.id)"></button></td>
     </tr>
 	<tr> 
-	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
+	<td align="center"><div class="number"><text id="number"><b id="score_1" style="font-size:20px">0</b></text></div></td>
 	</tr>
 	<tr>
-    <td><button id="downvote" class="arrow down"></button></td>
+    <td><button id="downvote_1" class="arrow down" onclick="vote(-1), this.id"></button></td>
 	</tr>
 	</table>
 	</div>
 	</td>
+	<td><img id="button_image_1" width="40" height="80" src="PNG/reagenzglas_teils.png"></td>
     <td>...</td>
     <td>...</td>
 	<td>...</td>
