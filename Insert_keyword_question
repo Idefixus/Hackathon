@@ -1,0 +1,14 @@
+
+Query für Insert von Frage und Keywords 
+
+INSERT INTO `fragen` (`ID`, `Fragestellung`) VALUES (NULL, 'Das ist eine Testfrage?'); 
+SET @key_frage = (SELECT `ID` FROM `fragen` WHERE `Fragestellung` = 'Das ist eine Testfrage?' );
+INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, 'Keyword1'); 
+SET @key_keyword1 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = 'Keyword1' );
+INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, 'Keyword2');
+SET @key_keyword2 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = 'Keyword2' ); 
+INSERT INTO `keywords` (`ID`, `Keyword`) VALUES (NULL, 'Keyword3');
+SET @key_keyword3 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = 'Keyword3' ); 
+
+INSERT INTO `mapping key:frage` (`ID_Frage`, `ID_Keyword`) VALUES (@key_frage, @key_keyword1), (@key_frage, @key_keyword2), (@key_frage, @key_keyword3);
+ 
