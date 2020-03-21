@@ -91,7 +91,7 @@ h1 {
 	text-align: center;
 	position: absolute;
 	left: 22%;
-	top: 300px;
+	top: 30%;
 }
 
 img {
@@ -112,6 +112,36 @@ img:hover + .hoverblock {
 	
 }
 
+p1 {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 32%;
+	font-size:120%
+	
+}
+
+.submitquestion button {
+	margin: 2em;
+	padding: .5em 1em;
+	width: 300px;
+	background: transparent;
+	color: black;
+	border: 1px solid black;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all ease 2s;
+	font-size: 120%;
+	position: absolute;
+	top: 60%;
+	left: -125px;
+}
+
+.submitquestion button:hover {
+	background: darkblue;
+	color: white;
+}
+
 </style>
 	
 <head>
@@ -120,7 +150,7 @@ img:hover + .hoverblock {
 </head>
  
 <body>
-<h1>Du möchtest dich über Fakenews informieren: <br> Versuch es mit einem Stichwort zu einem Thema welches dich interessiert</h1>
+<h1>Du möchtest dich über Corona informieren? <br> Versuch es mit einem Stichwort zu einem Thema welches dich interessiert</h1>
  
   <div class="search-container">
     <form action="">
@@ -130,6 +160,12 @@ img:hover + .hoverblock {
 	<img src="pics/Effekt.png" id = "germandot" height = "100">
   </div>
   <div class="hoverblock">I will show on hover</div>
+  <p1>Oder wenn du der Community helfen magst, beantworte Fragen deiner Wahl!<p1>
+<div class="submitquestion">  
+  <form method="get" action="/hackathon/alle_fragen.php">
+	<button type = "submit" id="search">Beantworte Fragen</button>
+  </form>
+</div>
   
 </body>
 </html>

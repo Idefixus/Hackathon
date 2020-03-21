@@ -3,7 +3,7 @@
 <style>
 
 body {
-	background-image: url('Hackathonlogo.png');
+	background-image: url('Pics/Hackathonlogo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -11,7 +11,6 @@ body {
 #questiontable td, #questiontable th {
 
 	padding: 20px;
-	border-bottom: 1px solid black;
 	
 }
 
@@ -19,23 +18,18 @@ body {
 	background-color: #ddd;
 }
 
-#questiontable th {
-	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: left;
-	position: block;
-}
-#questiontable tbody{
-	display: block;
-	height: 350px;
-	overflow-y: scroll;
-}
 #questiontable {
-	table-layout:auto;
+	
+
+	display: block;
+	max-height: 425px;
+	overflow-y: scroll;
 	border-collapse: collapse;
-	width: 80%;
-	position: absolute;
-	top: 22%;
+	table-layout: fixed;
+	width: 1200px;
+	position:absolute;
+	left: 5%;
+	top: 22%
 	
 	
 }
@@ -109,7 +103,7 @@ if (isset($_GET['frage'])){
 	<th></th>
   </tr>
  <tr>
-	<td> Hilft Schweiger Bier gegen Corona? </td>
+	<td> Hilft Schweiger Bier gegen Corona? Und ist Kevin der schönste Mann der Welt?</td>
 	<td> 5 </td>
 	<td> sehr gut </td>
 	<td> antworte hier </td>
