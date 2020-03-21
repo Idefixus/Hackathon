@@ -75,7 +75,7 @@ INSERT INTO `fragen` (`ID`, `Fragestellung`) VALUES
 
 CREATE TABLE `keywords` (
   `ID` int(11) NOT NULL,
-  `Keyword` text NOT NULL
+  `Keyword` text NOT NULL UNIQUE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
