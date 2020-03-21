@@ -1,0 +1,1 @@
+SELECT Fragestellung FROM fragen JOIN (mapping_key_frage JOIN keywords ON mapping_key_frage.ID_Keyword = keywords.ID) WHERE keywords.Keyword = Variable für eingegebenes Keyword 
