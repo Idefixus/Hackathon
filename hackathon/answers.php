@@ -3,7 +3,7 @@
 <style>
 
 body {
-	background-image: url('Hackathonlogo.png');
+	background-image: url('Pics/Hackathonlogo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -48,17 +48,28 @@ h1 {
 	top: 10%;
 }
 
+table {
+
+}
 .answertable #answertable{
 
-	
+	display: block;
+	max-height: 425px;
+	overflow-y: scroll;
 	border-collapse: collapse;
-	width: 60%;
+	table-layout: fixed;
+	width: 1200px;
 	position:absolute;
 	left: 5%;
-	top: 20%
+	top: 22%
 }
 .answertable #answertable td{
 	padding: 7px;
+}
+
+.votetable #votetable {
+	table-layout: fixed;
+	width:30px;
 }
 main {
   font-family: sans-serif;
@@ -119,7 +130,7 @@ button {
 <body>
 <h1>Ist Ibuprofen gefährlich bei Corona?</h1>
 
-<div class="answertable" style="overflow-y:auto;"> 
+<div class="answertable"> 
 	<table id="answertable">
   <tr>
   	<td>
@@ -152,7 +163,7 @@ button {
 	<td align="center"><div class="number"><text id="number"><b id="score_1" style="font-size:20px">0</b></text></div></td>
 	</tr>
 	<tr>
-    <td><button id="downvote_1" class="arrow down" onclick="vote(-1), this.id"></button></td>
+    <td><button id="downvote_1" class="arrow down" onclick="vote(-1, this.id)"></button></td>
 	</tr>
 	</table>
 	</div>

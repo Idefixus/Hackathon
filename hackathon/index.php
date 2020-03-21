@@ -54,7 +54,7 @@ $mysqli->close();
 }
 
 body {
-	background-image: url('Hackathonlogo.png');
+	background-image: url('Pics/Hackathonlogo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -100,8 +100,15 @@ img {
 	left: -118%;
 }
 
-img:hover{
-	
+.hoverblock {
+	background-color=blue;
+	padding: 20px;
+	display: none;
+}
+
+
+img:hover + .hoverblock {
+	display: block;
 	
 }
 
@@ -122,5 +129,7 @@ img:hover{
     </form>
 	<img src="pics/Effekt.png" id = "germandot" height = "100">
   </div>
+  <div class="hoverblock">I will show on hover</div>
+  
 </body>
 </html>
