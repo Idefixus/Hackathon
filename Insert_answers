@@ -1,0 +1,2 @@
+SET @key_frage = (SELECT `ID` FROM `fragen` WHERE `Fragestellung` = 'Das ist eine Testfrage?' );
+INSERT INTO `antworten` (`ID`, `Antworttext`, `Quelle`, `Upvote`, `Downvote`, `Serioes`, `Frage_ID`) VALUES (NULL, 'Das ist meine Antwort', 'Das ist mein Quelle ', NULL, NULL, NULL, @key_frage); 
