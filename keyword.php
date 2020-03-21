@@ -61,7 +61,7 @@ h1 {
 <h1>Leider haben wir keine passende Frage gefunden. Vielleicht versuch es mit einem Stichwort</h1>
  
   <div class="search-container">
-    <form action="/keyword.php">
+    <form method="get" action="http://localhost/questiontable.php">
       <input type="text" placeholder="Gib bitte dein Stichwort ein.." name="search">
       <button type = "submit" id="search">Search</button>
     </form>

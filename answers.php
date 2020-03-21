@@ -5,26 +5,23 @@
 	
 	position: absolute;
 	TOP: 400px;
-	left:35%;
+	left:40%;
 	
 }
-
 
 body {
 	background-image: url('Hackathonlogo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-
 }
 
 .search-container input {
-	padding: 6px;
 	height: 40px;
 	width: 400px;
 	border: 1px solid black;
 	border-radius: 3px;
-	transition: all ease 5s;	
-	font-size:120%;
+	transition: all ease 5s;
+	
 	
 }
 
@@ -48,15 +45,10 @@ body {
 
 h1 {
 	position: absolute;
-	left: 40%;
+	left: 22%;
 	top: 300px;
 }
 
-img {
-	position: absolute;
-	top: 475px;
-	left: -118%;
-}
 </style>
 	
 
@@ -66,14 +58,13 @@ img {
 </head>
  
 <body>
-<h1>Stelle deine Frage</h1>
+<h1>Leider haben wir keine passende Frage gefunden. Vielleicht versuch es mit einem Stichwort</h1>
  
   <div class="search-container">
-    <form method="get" action="http://localhost/questiontable.php">
-      <input type="text" placeholder="Gib deine Frage ein.." name="search">
+    <form action="/keyword.php">
+      <input type="text" placeholder="Gib bitte dein Stichwort ein.." name="search">
       <button type = "submit" id="search">Search</button>
     </form>
-	<img src="Effekt.png" id = "germandot" height = "100">
   </div>
 </body>
 </html>
