@@ -23,7 +23,7 @@ body {
 	width: 400px;
 	border: 1px solid black;
 	border-radius: 3px;
-	transition: all ease 5s;	
+	transition: all ease0.4s;	
 	font-size:120%;
 	
 }
@@ -38,7 +38,7 @@ body {
 	border: 1px solid black;
 	border-radius: 3px;
 	cursor: pointer;
-	transition: all ease 2s;
+	transition: all ease 0.4s;
 }
 
 .search-container button:hover {

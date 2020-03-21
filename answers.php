@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html> 
 <style>
-.search-container {
-	
-	position: absolute;
-	TOP: 400px;
-	left:40%;
-	
-}
 
 body {
 	background-image: url('Hackathonlogo.png');
@@ -15,39 +8,105 @@ body {
 	background-size: cover;
 }
 
-.search-container input {
-	height: 40px;
-	width: 400px;
-	border: 1px solid black;
-	border-radius: 3px;
-	transition: all ease 5s;
-	
-	
-}
 
-.search-container button {
-	position: relative;
-	margin: 2em;
-	padding: .5em 1em;
-	width: 8em;
-	background: transparent;
-	color: black;
-	border: 1px solid black;
-	border-radius: 3px;
+.downvote button {
+	background:url(Downvote.png) no-repeat;
 	cursor: pointer;
-	transition: all ease 2s;
+	width:135px;
+	height:145px;
+	border: none;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+
 }
 
-.search-container button:hover {
-	background: darkblue;
-	color: white;
+.downvote button:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
+.upvote button {
+	background:url(Upvote.png) no-repeat;
+	cursor: pointer;
+	width:135px;
+	height:145px;
+	border: none;
+	position: absolute;
+	top: 60%;
+	left: 30%;
+
+}
+
+.upvote button:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 
 h1 {
 	position: absolute;
-	left: 22%;
-	top: 300px;
+	left: 15%;
+	top: 10%;
 }
+
+.answertable #answertable{
+
+	
+	border-collapse: collapse;
+	width: 60%;
+	position:absolute;
+	left: 5%;
+	top: 20%
+}
+.answertable #answertable td{
+	padding: 7px;
+}
+main {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+
+
+button {
+  border: solid black;
+  border-width: 0px 5px 5px 0px;
+  display: inline-block;
+}
+
+.number #number{
+	font-size = 5;
+}
+
+.right {
+	  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+	  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+	  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+	margin-up: 120%;
+  }
+
+.down {
+
+	  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  	margin-bottom: 60%;
+
+	}
+	
+
 
 </style>
 	
@@ -58,13 +117,176 @@ h1 {
 </head>
  
 <body>
-<h1>Leider haben wir keine passende Frage gefunden. Vielleicht versuch es mit einem Stichwort</h1>
+<h1>Ist Ibuprofen gefährlich bei Corona?</h1>
+
+<div class="answertable" style="overflow-y:auto;"> 
+	<table id="answertable">
+  <tr>
+  	<td>
+	<div class="votetable">
+	<table id ="votetable">
+	<tr>
+    <td><button id="upvote" class="arrow up"></button></td>
+    </tr>
+	<tr> 
+	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
+	</tr>
+	<tr>
+    <td><button id="downvote" class="arrow down"></button></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+	<td><img id="button_image" width="40" height="80" src="PNG/reagenzglas_teils.png"></td>	
+    <td>Ibuprofen wurde vom Robert-Koch-Institut als gefährlich eingestuft während man unter Covid-19 leidet.</td>
+    <td><a href=“https//www.rki.de“>www.rki.de</a></td>
+  </tr>
+  <tr>
+    	<td>
+	<div class="votetable">
+	<table id ="votetable">
+	<tr>
+    <td><button id="upvote" class="arrow up"></button></td>
+    </tr>
+	<tr> 
+	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
+	</tr>
+	<tr>
+    <td><button id="downvote" class="arrow down"></button></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+    <td>...</td>
+    <td>...</td>
+	<td>...</td>
+  </tr>
+    <tr>
+	  	<td>
+	<div class="votetable">
+	<table id ="votetable">
+	<tr>
+    <td><button id="upvote" class="arrow up"></button></td>
+    </tr>
+	<tr> 
+	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
+	</tr>
+	<tr>
+    <td><button id="downvote" class="arrow down"></button></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+    <td>...</td>
+    <td>...</td>
+	<td>...</td>
+  </tr>
+    <tr>
+	  	<td>
+	<div class="votetable">
+	<table id ="votetable">
+	<tr>
+    <td><button id="upvote" class="arrow up"></button></td>
+    </tr>
+	<tr> 
+	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
+	</tr>
+	<tr>
+    <td><button id="downvote" class="arrow down"></button></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+    <td>...</td>
+    <td>...</td>
+	<td>...</td>
+  </tr>
+    <tr>
+	  	<td>
+	<div class="votetable">
+	<table id ="votetable">
+	<tr>
+    <td><button id="upvote" class="arrow up"></button></td>
+    </tr>
+	<tr> 
+	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
+	</tr>
+	<tr>
+    <td><button id="downvote" class="arrow down"></button></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+    <td>...</td>
+    <td>...</td>
+	<td>...</td>
+  </tr>  <tr>
+    	<td>
+	<div class="votetable">
+	<table id ="votetable">
+	<tr>
+    <td><button id="upvote" class="arrow up"></button></td>
+    </tr>
+	<tr> 
+	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
+	</tr>
+	<tr>
+    <td><button id="downvote" class="arrow down"></button></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+    <td>...</td>
+    <td>...</td>
+	<td>...</td>
+  </tr>  <tr>
+    	<td>
+	<div class="votetable">
+	<table id ="votetable">
+	<tr>
+    <td><button id="upvote" class="arrow up"></button></td>
+    </tr>
+	<tr> 
+	<td align="center"><div class="number"><text id="number"><b style="font-size:20px">0</b></text></div></td>
+	</tr>
+	<tr>
+    <td><button id="downvote" class="arrow down"></button></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+    <td>...</td>
+    <td>...</td>
+	<td>...</td>
+  </tr>
+    <tr>
+    <td>...</td>
+    <td>...</td>
+	<td>...</td>
+  </tr>
+    <tr>
+    <td>...</td>
+    <td>...</td>
+	<td>...</td>
+  </tr>
+    <tr>
+    <td>...</td>
+    <td>...</td>
+	<td>...</td>
+  </tr>
+  </table>
+
+</div>
+
+
+	
+	
+	
+
+
  
-  <div class="search-container">
-    <form action="/keyword.php">
-      <input type="text" placeholder="Gib bitte dein Stichwort ein.." name="search">
-      <button type = "submit" id="search">Search</button>
-    </form>
-  </div>
+	<script src="upvote.js"></script>
+  
+  
 </body>
 </html>
