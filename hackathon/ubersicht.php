@@ -81,8 +81,8 @@ p1 {
 	transition: all ease 2s;
 	font-size: 120%;
 	position: absolute;
-	top: 50px;
-	left:50px;
+	top: -46px;
+	left: -46px;
 	font-size: 28px;
 	
 }
