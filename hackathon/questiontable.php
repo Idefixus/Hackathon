@@ -1,9 +1,10 @@
+<?php include 'credentials.php';?>
 <!DOCTYPE html>
 <html> 
 <style>
 
 body {
-	background-image: url('Hackathonlogo.png');
+	background-image: url('Pics/Hackathonlogo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -107,11 +108,10 @@ if (isset($_GET['frage'])){
 	$search_param = $_GET['frage'];
 	//echo "Frage isset";
 	// Connect to database
-	$mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
+	$mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
 
 	/* check connection */
 	if ($mysqli->connect_errno) {
-		//printf("Connect failed: %s\n", $mysqli->connect_error);
 		exit();
 	}
 }

@@ -1,8 +1,9 @@
+<?php include 'credentials.php';?>
 <?php
 // Get the question
 
 // Connect to database
-	$mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
+	$mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
 
 	/* check connection */
 	if ($mysqli->connect_errno) {

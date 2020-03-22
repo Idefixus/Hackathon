@@ -1,3 +1,4 @@
+<?php include 'credentials.php';?>
 <!DOCTYPE html>
 <html> 
 <style>
@@ -171,7 +172,7 @@ h2 {
 // Get the question
 
 // Connect to database
-	$mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
+	$mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
 
 	/* check connection */
 	if ($mysqli->connect_errno) {
@@ -188,7 +189,7 @@ h2 {
 	$fragen_id = $_GET['fragen_id'];
 	}
 	else $fragen_id = "Es muss eine Fragenid vergeben werden";
-	
+
 	$query = "SELECT * From fragen where ID = $fragen_id";
 
 	// Print the answers

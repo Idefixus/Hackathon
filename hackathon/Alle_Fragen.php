@@ -1,3 +1,5 @@
+<?php include 'credentials.php';?>
+
 <!DOCTYPE html>
 <html> 
 <style>
@@ -114,7 +116,6 @@ if (isset($_GET['frage'])){
 
 	/* check connection */
 	if ($mysqli->connect_errno) {
-		//printf("Connect failed: %s\n", $mysqli->connect_error);
 		exit();
 	}
 }
@@ -134,11 +135,10 @@ if (isset($_GET['frage'])){
  // Lies alle Fragen aus der DB aus
 
  // Connect to database
- $mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
+ $mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
 
  /* check connection */
  if ($mysqli->connect_errno) {
-	 //printf("Connect failed: %s\n", $mysqli->connect_error);
 	 exit();
  }
 /* Select queries return a resultset */
@@ -149,12 +149,10 @@ $query = "SELECT fragen.ID as ID_Frage, Fragestellung, COUNT(fragen.ID) as Anzah
 			$fragen_id = $row['ID_Frage'];
 			$fragestellung = $row['Fragestellung'];
 			$anzahl_antworten = $row['Anzahl_Antwort'];
-			//$bewertung = $row['Bewertung'];
 
 			echo "<tr>";	
 			echo "<td> $fragestellung </td>";
 			echo "<td> $anzahl_antworten </td>";
-			//echo "<td> $bewertung </td>";
 			echo "<td onclick='window.location=\"/hackathon/answers.php?fragen_id=$fragen_id\"'> Beantworten </td>";
 			echo "</tr>";
 			}

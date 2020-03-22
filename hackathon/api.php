@@ -1,3 +1,4 @@
+<?php include 'credentials.php';?>
 <?php
 // if data are received via POST, with index of 'test'
 if (isset($_POST['antwort_id']) && isset($_POST['type'])) {
@@ -7,7 +8,7 @@ if (isset($_POST['antwort_id']) && isset($_POST['type'])) {
 
 
     // Connect to database
-    $mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
+	$mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
 
     /* check connection */
     if ($mysqli->connect_errno) {
