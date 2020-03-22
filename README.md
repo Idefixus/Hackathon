@@ -27,8 +27,8 @@ https://www.youtube.com/watch?v=Ym7Jx0HMcyQ
 # Further possibilities for improvement
 - Database for Sources
 - Automatic recognition of keywords from the question
-- automatic recognition of minimal variations of already existing questions
-- ranking of sources: primary sources (WHO, RKI, ...), news websites (sz.de, tagesschau.de, ...), other sources (reddit, ...)
-- protection of the votes against manipulation
-- automatic comparison of the content of the named answer to the content of the named source
-- possiblity to overrule highly voted fake news with primary sources 
+- Automatic recognition of minimal variations of already existing questions
+- Ranking of sources: primary sources (WHO, RKI, ...), news websites (sz.de, tagesschau.de, ...), other sources (reddit, ...)
+- Protection of the votes against manipulation
+- Automatic comparison of the content of the named answer to the content of the named source
+- Possiblity to overrule highly voted fake news with primary sources 
