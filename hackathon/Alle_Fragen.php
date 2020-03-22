@@ -126,70 +126,42 @@ if (isset($_GET['frage'])){
   <tr>
     <th>Frage</th>
     <th>Anzahl der Antworten</th>
-	<th>Durchschnittliche Bewertung</th>
+	<!--<th>Durchschnittliche Bewertung</th>-->
 	<th></th>
   </tr>
- <tr>
-	<td> Hilft Schweiger Bier gegen Corona? Und ist Kevin der schönste Mann der Welt?</td>
-	<td> 5 </td>
-	<td> sehr gut </td>
-	<td> antworte hier </td>
-  </tr>
-  <tr>
-	<td> Hilft Schweiger Bier gegen Corona? </td>
-	<td> 5 </td>
-	<td> sehr gut </td>
-	<td> antworte hier </td>
-  </tr>
-  <tr>
-	<td> Hilft Schweiger Bier gegen Corona? </td>
-	<td> 5 </td>
-	<td> sehr gut </td>
-	<td> antworte hier </td>
-  </tr>
-  <tr>
-	<td> Hilft Schweiger Bier gegen Corona? </td>
-	<td> 5 </td>
-	<td> sehr gut </td>
-	<td> antworte hier </td>
-  </tr>
-  <tr>
-	<td> Hilft Schweiger Bier gegen Corona? </td>
-	<td> 5 </td>
-	<td> sehr gut </td>
-	<td> antworte hier </td>
-  </tr>
-  <tr>
-	<td> Hilft Schweiger Bier gegen Corona? </td>
-	<td> 5 </td>
-	<td> sehr gut </td>
-	<td> antworte hier </td>
-  </tr>
-  <tr>
-	<td> Hilft Schweiger Bier gegen Corona? </td>
-	<td> 5 </td>
-	<td> sehr gut </td>
-	<td> antworte hier </td>
-  </tr>
-  <tr>
-	<td> Hilft Schweiger Bier gegen Corona? </td>
-	<td> 5 </td>
-	<td> sehr gut </td>
-	<td> antworte hier </td>
-  </tr>
-  <tr>
-	<td> Hilft Schweiger Bier gegen Corona? </td>
-	<td> 5 </td>
-	<td> sehr gut </td>
-	<td> antworte hier </td>
-  </tr>
-  <tr>
-	<td> Hilft Schweiger Bier gegen Corona? </td>
-	<td> 5 </td>
-	<td> sehr gut </td>
-	<td> antworte hier </td>
-  </tr>
-  
+
+  <?php
+ // Lies alle Fragen aus der DB aus
+
+ // Connect to database
+ $mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
+
+ /* check connection */
+ if ($mysqli->connect_errno) {
+	 //printf("Connect failed: %s\n", $mysqli->connect_error);
+	 exit();
+ }
+/* Select queries return a resultset */
+$query = "SELECT fragen.ID as ID_Frage, Fragestellung, COUNT(fragen.ID) as Anzahl_Antwort FROM fragen JOIN antworten WHERE fragen.ID = antworten.Frage_ID GROUP BY fragen.ID;";
+	if ($result = $mysqli->query($query)) {
+		while ($row = $result->fetch_assoc()) {
+
+			$fragen_id = $row['ID_Frage'];
+			$fragestellung = $row['Fragestellung'];
+			$anzahl_antworten = $row['Anzahl_Antwort'];
+			//$bewertung = $row['Bewertung'];
+
+			echo "<tr>";	
+			echo "<td> $fragestellung </td>";
+			echo "<td> $anzahl_antworten </td>";
+			//echo "<td> $bewertung </td>";
+			echo "<td onclick='window.location=\"/hackathon/answers.php?fragen_id=$fragen_id\"'> Beantworten </td>";
+			echo "</tr>";
+			}
+	$result->close();
+	}
+$mysqli->close();	
+  ?>
 </table>
 <p1> 
 Hast du keine passende Frage gefunden? Stelle deine eigene!

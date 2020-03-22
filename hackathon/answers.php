@@ -184,8 +184,11 @@ h2 {
 }
 
 	// Get the question:
-	//$fragen_id = $_GET['fragen_id'];
-	$fragen_id = 1;
+	if (isset($_GET['fragen_id'])){
+	$fragen_id = $_GET['fragen_id'];
+	}
+	else $fragen_id = "Es muss eine Fragenid vergeben werden";
+	
 	$query = "SELECT * From fragen where ID = $fragen_id";
 
 	// Print the answers
