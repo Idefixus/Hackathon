@@ -146,7 +146,7 @@ p1 {
 	
 <head>
 	<meta charset="UTF-8" />	
-	<title>Eure erster PHP-Script</title> 
+	<title>Wir gegen Corona - Startseite</title> 
 </head>
  
 <body>

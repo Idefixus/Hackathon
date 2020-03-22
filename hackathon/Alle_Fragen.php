@@ -68,13 +68,40 @@ p1 {
 	font-size: 120%;
 }
 
+.homebutton button {
+	padding-left: 9px;
+	padding-right: 8px;
+	width:45px;
+	padding-top:1px;
+	padding-bottom: 5px;
+	height: 36px;
+	background: transparent;
+	color: black;
+	border: 1px solid black;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all ease 2s;
+	font-size: 120%;
+	position: absolute;
+	top: -46px;
+	left: -46px;
+	font-size: 28px;
+	
+}
+
+.homebutton button:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	background-color: Yellow;
+}
+
 </style>
 
 	
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Eure erster PHP-Script</title> 
+	<title>Wir gegen Corona - Deine Fragenübersicht!</title> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
  
 <body>
@@ -170,6 +197,10 @@ Hast du keine passende Frage gefunden? Stelle deine eigene!
 <form method="get" action="/hackathon/erstellen.php">
 	<button type = "submit" id="search">Stelle deine eigene Frage</button>
 </form>
-	
+<div class="homebutton">  
+  <form method="get" action="/hackathon/index.php">
+	<button type = "btn"><i class="fa fa-home"></i></button>
+  </form>
+</div>	
 </body>
 </html>
