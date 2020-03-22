@@ -137,7 +137,7 @@ if (isset($_GET['frage'])){
 			//print_r($row['Fragestellung']);
 			$id = $row['ID_Frage'];
 			$id2 = $row['Fragestellung'];
-				echo "<tr onclick='window.location=\'/hackathon/answers.php?fragen_id=$id\''>";
+				echo "<tr onclick='window.location=\"/hackathon/answers.php?fragen_id=$id\"'>";
 				echo "<td>$id</td>";
 				echo "<td>$id2</td>";
 				echo "<td></td>";
