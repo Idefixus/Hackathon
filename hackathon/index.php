@@ -146,6 +146,7 @@ p1 {
 </style>
 	
 <head>
+	<link rel="shortcut icon" href="Pics/favicon.ico" />
 	<meta charset="UTF-8" />	
 	<title>Wir gegen Corona - Startseite</title> 
 </head>
@@ -154,11 +155,11 @@ p1 {
 <h1>Du möchtest dich über Corona informieren? <br> Versuch es mit einem Stichwort zu einem Thema welches dich interessiert</h1>
  
   <div class="search-container">
-    <form action="">
+    <form action="/hackathon/index.php">
       <input type="text" id="search" placeholder="Gib bitte dein Stichwort ein.." name="search">
       <button type = "submit" id="search">Search</button>
     </form>
-	<img src="pics/Effekt.png" id = "germandot" height = "100">
+	<img src="Pics/Effekt.png" id = "germandot" height = "100">
   </div>
   <div class="hoverblock">I will show on hover</div>
   <p1>Oder wenn du der Community helfen magst, beantworte Fragen deiner Wahl!<p1>

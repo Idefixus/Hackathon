@@ -112,8 +112,8 @@ if (isset($_GET['frage'])){
 	$search_param = $_GET['frage'];
 	//echo "Frage isset";
 	// Connect to database
-	$mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
-
+	$mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
+	$mysqli->set_charset("utf8");
 	/* check connection */
 	if ($mysqli->connect_errno) {
 		exit();
