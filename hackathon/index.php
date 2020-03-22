@@ -66,7 +66,7 @@ body {
 	border: 1px solid black;
 	border-radius: 3px;
 	transition: all ease 0.5s;
-	
+	font-size: 24px;
 	
 }
 
