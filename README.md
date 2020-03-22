@@ -23,3 +23,12 @@ https://www.youtube.com/watch?v=Ym7Jx0HMcyQ
 ![Alle beantworteten Fragen](https://github.com/Idefixus/Hackathon/blob/master/alle_beantworteten.png)
 
 ![Detail seite einer Frage](https://github.com/Idefixus/Hackathon/blob/master/Vorschau%20Default_page.png)
+
+# Further possibilities for improvement
+- Database for Sources
+- Automatic recognition of keywords from the question
+- automatic recognition of minimal variations of already existing questions
+- ranking of sources: primary sources (WHO, RKI, ...), news websites (sz.de, tagesschau.de, ...), other sources (reddit, ...)
+- protection of the votes against manipulation
+- automatic comparison of the content of the named answer to the content of the named source
+- possiblity to overrule highly voted fake news with primary sources 
