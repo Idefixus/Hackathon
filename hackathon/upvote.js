@@ -25,7 +25,7 @@ function vote(type, passedID) {
     scoreHeading.textContent = score + type;
     buttons[type].classList.add("active");
   }
-  if(scoreHeading.textContent > 5) {
+  if(scoreHeading.textContent >= 5) {
       document.getElementById(image_ID).src="PNG/reagenzglas_richtig.png";
     } else if (scoreHeading.textContent > 0) {
         document.getElementById(image_ID).src="PNG/reagenzglas_eher_richtig.png";
