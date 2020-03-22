@@ -43,15 +43,15 @@ CREATE TABLE `antworten` (
 --
 
 INSERT INTO `antworten` (`ID`, `Antworttext`, `Quelle`, `Upvote`, `Downvote`, `Serioes`, `Frage_ID`) VALUES
-(1, 'Der Effekt von Ibuprofen auf den Coronavirus ist aktuell noch unbekannt. ', 'https://www.tagesschau.de/faktenfinder/corona-ibuprofen-101.html', NULL, NULL, NULL, 1),
-(2, 'Nein eine Ausgangssperre ist völlig unbedenklich. Es ist wichtig seinen wöchentlichen Alkoholkonsum aufrecht zu erhalten.', 'https://www.der-postillon.com/2020/03/ausgangssperre.html', NULL, 1, NULL, 2),
-(3, 'Sie behauptet, dass es einen Zusammenhang zwischen Corona-Fällen mit schweren Verläufen und Ibuprofen gebe. Das haben Ärzte des Wiener Uniklinikums herausgefunden. Weil das aber noch keine offizielle Forschung ist, wird die Nachricht aus Angst vor Schadenersatzforderungen durch Pharmaunternehmen zurückgehalten.', 'Sprachnachricht von einer Sprecherin des Wiender Uniklinikums', NULL, NULL, NULL, 1),
-(4, 'Dem BfR sind bisher keine Infektionen mit SARS-CoV-2 über diesen Übertragungsweg bekannt. Grundsätzlich können Coronaviren durch direktes Niesen oder Husten einer infizierten Person auf Türklinken gelangen und eine Zeit lang überleben. Eine Schmierinfektion einer weiteren Person erscheint dann möglich, wenn das Virus kurz danach über die Hände auf die Schleimhäute des Mund- und Rachenraumes oder die Augen übertragen wird. Deshalb ist eine gute Händehygiene mit regelmäßigem Händewaschen und Fernhalten der Hände aus dem Gesicht wichtig.', 'https://www.bfr.bund.de/de/kann_das_neuartige_coronavirus_ueber_lebensmittel_und_gegenstaende_uebertragen_werden_-244062.html', NULL, NULL, NULL, 7),
-(5, 'Das Virus hält sich bis zu 9 Tagen. ', 'https://www.n-tv.de/wissen/Coronavirus-ueberlebt-tagelang-auf-Flaechen-article21562809.html', NULL, NULL, NULL, 7),
-(6, 'In China werden bereits Geldschiene von der Regierunge eingezogen, weil sie Angst haben, dass dadurch Corona übertragen werden kann.', 'https://www.tagesspiegel.de/wirtschaft/coronavirus-durch-bargeld-uebertragbar-china-zieht-wegen-covid-19-geldscheine-ein/25588432.html', NULL, NULL, NULL, 6),
-(7, 'Das Virus kann auf Pappe bis zu 24h überleben. Daher ist es zwar möglich, dass der Virus auf dem Geldschein haftet, allerdings ist das nur kritisch, falls man sich danach direkt ins Gesicht an Mund oder Nase fasst. Daher bitte gut Hände waschen nach dem Einkaufen. ', 'https://www.bayern3.de/fakt-fake-corona-anstecken-ueber-bargeld', NULL, NULL, NULL, 6),
-(8, 'Die Einschränkungen in Bayern gelten aktuell für jeden.', 'https://www.sueddeutsche.de/bayern/coronavirus-bayern-ausgangsbeschraenkung-regeln-1.4852160', NULL, NULL, NULL, 5),
-(9, 'Nein, Luft anhalten ist kein Selbsttest für Covid-19, kann aber auf andere Atemwegserkrankungen hinweisen.\r\n', 'https://www.sueddeutsche.de/gesundheit/gesundheit-ist-luftanhalten-ein-schnelltest-auf-das-coronavirus-dpa.urn-newsml-dpa-com-20090101-200321-99-417668', NULL, NULL, NULL, 8);
+(1, 'Der Effekt von Ibuprofen auf den Coronavirus ist aktuell noch unbekannt. ', 'https://www.tagesschau.de/faktenfinder/corona-ibuprofen-101.html', 0, 0, NULL, 1),
+(2, 'Nein eine Ausgangssperre ist völlig unbedenklich. Es ist wichtig seinen wöchentlichen Alkoholkonsum aufrecht zu erhalten.', 'https://www.der-postillon.com/2020/03/ausgangssperre.html', 0, 1, NULL, 2),
+(3, 'Sie behauptet, dass es einen Zusammenhang zwischen Corona-Fällen mit schweren Verläufen und Ibuprofen gebe. Das haben Ärzte des Wiener Uniklinikums herausgefunden. Weil das aber noch keine offizielle Forschung ist, wird die Nachricht aus Angst vor Schadenersatzforderungen durch Pharmaunternehmen zurückgehalten.', 'Sprachnachricht von einer Sprecherin des Wiender Uniklinikums', 0, 0, NULL, 1),
+(4, 'Dem BfR sind bisher keine Infektionen mit SARS-CoV-2 über diesen Übertragungsweg bekannt. Grundsätzlich können Coronaviren durch direktes Niesen oder Husten einer infizierten Person auf Türklinken gelangen und eine Zeit lang überleben. Eine Schmierinfektion einer weiteren Person erscheint dann möglich, wenn das Virus kurz danach über die Hände auf die Schleimhäute des Mund- und Rachenraumes oder die Augen übertragen wird. Deshalb ist eine gute Händehygiene mit regelmäßigem Händewaschen und Fernhalten der Hände aus dem Gesicht wichtig.', 'https://www.bfr.bund.de/de/kann_das_neuartige_coronavirus_ueber_lebensmittel_und_gegenstaende_uebertragen_werden_-244062.html', 0, 0, NULL, 7),
+(5, 'Das Virus hält sich bis zu 9 Tagen. ', 'https://www.n-tv.de/wissen/Coronavirus-ueberlebt-tagelang-auf-Flaechen-article21562809.html', 0, 0, NULL, 7),
+(6, 'In China werden bereits Geldschiene von der Regierunge eingezogen, weil sie Angst haben, dass dadurch Corona übertragen werden kann.', 'https://www.tagesspiegel.de/wirtschaft/coronavirus-durch-bargeld-uebertragbar-china-zieht-wegen-covid-19-geldscheine-ein/25588432.html', 0, 0, NULL, 6),
+(7, 'Das Virus kann auf Pappe bis zu 24h überleben. Daher ist es zwar möglich, dass der Virus auf dem Geldschein haftet, allerdings ist das nur kritisch, falls man sich danach direkt ins Gesicht an Mund oder Nase fasst. Daher bitte gut Hände waschen nach dem Einkaufen. ', 'https://www.bayern3.de/fakt-fake-corona-anstecken-ueber-bargeld', 0, 0, NULL, 6),
+(8, 'Die Einschränkungen in Bayern gelten aktuell für jeden.', 'https://www.sueddeutsche.de/bayern/coronavirus-bayern-ausgangsbeschraenkung-regeln-1.4852160', 0, 0, NULL, 5),
+(9, 'Nein, Luft anhalten ist kein Selbsttest für Covid-19, kann aber auf andere Atemwegserkrankungen hinweisen.\r\n', 'https://www.sueddeutsche.de/gesundheit/gesundheit-ist-luftanhalten-ein-schnelltest-auf-das-coronavirus-dpa.urn-newsml-dpa-com-20090101-200321-99-417668', 0, 0, NULL, 8);
 
 -- --------------------------------------------------------
 
@@ -203,22 +203,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 --
-UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 1; 
-UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 2; 
-UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 3; 
-UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 4; 
-UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 5; 
-UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 6; 
-UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 7; 
-UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 8; 
-UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 9; 
-
-UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 1; 
-UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 2; 
-UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 3; 
-UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 4; 
-UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 5; 
-UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 6; 
-UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 7; 
-UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 8; 
-UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 9; 
