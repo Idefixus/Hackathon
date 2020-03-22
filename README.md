@@ -1,9 +1,6 @@
 # Hackathon
 Hi we are participating in the german hackathon for corona and this is our project
 
-# Install
-Self install.
-
 ## Requirements
 - The project is located at https://github.com/Idefixus/Hackathon/tree/master/hackathon (The hackathon subfolder, which should lie at the root of your server)
 - XAMPP or PHP server and SQL Database
