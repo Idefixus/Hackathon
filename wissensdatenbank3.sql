@@ -203,4 +203,22 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 --
-Update antworten set Upvote = 0, Downvote = 0;
+UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 1; 
+UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 2; 
+UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 3; 
+UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 4; 
+UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 5; 
+UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 6; 
+UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 7; 
+UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 8; 
+UPDATE `antworten` SET `Upvote` = '0' WHERE `antworten`.`ID` = 9; 
+
+UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 1; 
+UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 2; 
+UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 3; 
+UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 4; 
+UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 5; 
+UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 6; 
+UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 7; 
+UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 8; 
+UPDATE `antworten` SET `Downvote` = '0' WHERE `antworten`.`ID` = 9; 
