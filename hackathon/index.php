@@ -157,7 +157,7 @@ p1 {
       <input type="text" id="search" placeholder="Gib bitte dein Stichwort ein.." name="search">
       <button type = "submit" id="search">Search</button>
     </form>
-	<img src="pics/Effekt.png" id = "germandot" height = "100">
+	<img src="Pics/Effekt.png" id = "germandot" height = "100">
   </div>
   <div class="hoverblock">I will show on hover</div>
   <p1>Oder wenn du der Community helfen magst, beantworte Fragen deiner Wahl!<p1>
