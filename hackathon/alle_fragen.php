@@ -101,6 +101,14 @@ p1 {
 	background-color: Yellow;
 }
 
+#link {
+	padding = 2px;
+	border-color: black;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px;
+}
+
 </style>
 
 </head>
@@ -152,7 +160,7 @@ $query = "SELECT fragen.ID as ID_Frage, Fragestellung, COUNT(fragen.ID) as Anzah
 			echo "<tr>";	
 			echo "<td> $fragestellung </td>";
 			echo "<td> $anzahl_antworten </td>";
-			echo "<td onclick='window.location=\"/hackathon/answers.php?fragen_id=$fragen_id\"'> Beantworten </td>";
+			echo "<td onclick='window.location=\"/hackathon/answers.php?fragen_id=$fragen_id\"'> <b underline=true id=link>Beantworten<b> </td>";
 			echo "</tr>";
 			}
 	$result->close();
