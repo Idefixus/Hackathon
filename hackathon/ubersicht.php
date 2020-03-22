@@ -124,7 +124,7 @@ if (isset($_GET['frage'])){
     <th>ID</th>
     <th>Frage</th>
 	<th>Reagenzglass</th>
-  </tr>
+
 	<?php //Table for all the results
 
 	/* Select queries return a resultset */
@@ -137,9 +137,10 @@ if (isset($_GET['frage'])){
 			//print_r($row['Fragestellung']);
 			$id = $row['ID_Frage'];
 			$id2 = $row['Fragestellung'];
-				//echo "<tr>";
+				echo "<tr onclick='window.location=\'/hackathon/answers.php?fragen_id=$id\''>";
 				echo "<td>$id</td>";
 				echo "<td>$id2</td>";
+				echo "<td></td>";
 				echo "</tr>";
 		}
 		$result->close();
@@ -147,6 +148,7 @@ if (isset($_GET['frage'])){
 	$mysqli->close();	
 
 		?>
+
 </table>
 <p1> 
 Hast du keine passende Frage gefunden? Stelle deine eigene!

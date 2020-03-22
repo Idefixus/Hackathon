@@ -36,4 +36,11 @@ function vote(type, passedID) {
     } else {
     document.getElementById(image_ID).src="PNG/reagenzglas_falsch.png";
   }
+
+  //send it to Server
+  var request = new XMLHttpRequest();
+  var query = "antwort_id=" + passedID.split("_")[1] + "&type=" + type;
+  request.open('POST', 'api.php', true);
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  request.send(query);
 };
