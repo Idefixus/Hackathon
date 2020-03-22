@@ -2,7 +2,12 @@
 
 <!DOCTYPE html>
 <html> 
-<style>
+<head>
+	<meta charset="UTF-8" />
+	<title>Wir gegen Corona - Deine Fragenübersicht!</title> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
 
 body {
 	background-image: url('Pics/Hackathonlogo.png');
@@ -98,12 +103,6 @@ p1 {
 
 </style>
 
-	
-
-<head>
-	<meta charset="UTF-8" />
-	<title>Wir gegen Corona - Deine Fragenübersicht!</title> 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
  
 <body>
@@ -121,7 +120,7 @@ if (isset($_GET['frage'])){
 }
 ?>
 
-<h1>Alle verfügbaren Fragen</h1>
+<h1>Alle beantworteten Fragen</h1>
  
  <table id="questiontable">
   <tr>

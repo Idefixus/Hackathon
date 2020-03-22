@@ -45,7 +45,14 @@ $mysqli->close();
 
 <!DOCTYPE html>
 <html> 
-<style>
+
+	
+<head>
+	<link rel="shortcut icon" href="Pics/favicon.ico" />
+	<meta charset="UTF-8" />	
+	<title>Wir gegen Corona - Startseite</title> 
+
+	<style>
 .search-container {
 	
 	position: absolute;
@@ -144,11 +151,6 @@ p1 {
 }
 
 </style>
-	
-<head>
-	<link rel="shortcut icon" href="Pics/favicon.ico" />
-	<meta charset="UTF-8" />	
-	<title>Wir gegen Corona - Startseite</title> 
 </head>
  
 <body>
@@ -165,7 +167,7 @@ p1 {
   <p1>Oder wenn du der Community helfen magst, beantworte Fragen deiner Wahl!<p1>
 <div class="submitquestion">  
   <form method="get" action="/hackathon/alle_fragen.php">
-	<button type = "submit" id="search">Beantworte Fragen</button>
+	<button type = "submit" id="search">Beantwortete Fragen</button>
   </form>
 </div>
   

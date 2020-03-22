@@ -116,6 +116,7 @@ if (isset($_GET['frage']) && isset($_GET['keyword'])){
 			SET @key_keyword1 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = '$keyword' );
 			INSERT INTO `mapping key:frage` (`ID_Frage`, `ID_Keyword`) VALUES (@key_frage, @key_keyword1);
 			";
+			echo "$query";
 			if ($mysqli->multi_query($query)) {
 				do {
 					/* store first result set */
@@ -143,6 +144,7 @@ if (isset($_GET['frage']) && isset($_GET['keyword'])){
 			SET @key_keyword1 = (SELECT `ID` FROM `keywords` WHERE `Keyword` = '$keyword' );
 			INSERT INTO `mapping key:frage` (`ID_Frage`, `ID_Keyword`) VALUES (@key_frage, @key_keyword1);
 			";
+			echo "Query: $query";
 			if ($mysqli->multi_query($query)) {
 				do {
 					/* store first result set */

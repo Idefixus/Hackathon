@@ -1,7 +1,13 @@
 <?php include 'credentials.php';?>
 <!DOCTYPE html>
 <html> 
-<style>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Wir gegen Corona - Deine Antworten!</title> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
 
 body {
 	background-image: url('Pics/Hackathonlogo.png');
@@ -158,12 +164,7 @@ h2 {
 
 
 </style>
-	
 
-<head>
-	<meta charset="UTF-8" />
-	<title>Wir gegen Corona - Deine Antworten!</title> 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
  
 <body>
@@ -293,7 +294,7 @@ if (isset($_POST['antwort']) && isset($_POST['quelle']))
 
 			$query = "SET @key_frage = (SELECT `ID` FROM `fragen` WHERE `Fragestellung` = '$fragestellung' );
 					INSERT INTO `antworten` (`ID`, `Antworttext`, `Quelle`, `Upvote`, `Downvote`, `Serioes`, `Frage_ID`) 
-					VALUES (NULL, '$antwort', '$quelle ', NULL, NULL, NULL, @key_frage);";
+					VALUES (NULL, '$antwort', '$quelle', 0, 0, NULL, @key_frage);";
 			if ($mysqli->multi_query($query)) {
 				do {
 					/* store first result set */
