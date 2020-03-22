@@ -122,9 +122,9 @@ if (isset($_GET['frage'])){
  
  <table id="questiontable">
   <tr>
-    <th>ID</th>
+    <th></th>
     <th>Frage</th>
-	<th>Reagenzglass</th>
+	<th></th>
 
 	<?php //Table for all the results
 
