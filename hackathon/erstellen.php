@@ -5,7 +5,7 @@
 	
 	position: absolute;
 	TOP: 400px;
-	left:40%;
+	left:22%;
 	
 }
 
@@ -44,9 +44,13 @@ body {
 }
 
 h1 {
+	
+	overflow-wrap: break-word;	
 	position: absolute;
-	left: 22%;
+	left: 18%;
 	top: 300px;
+	
+	width:1000px;
 }
 
 .homebutton button {

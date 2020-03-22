@@ -107,6 +107,55 @@ button {
 	background-color: Yellow;
 }
 
+.answer-container {
+		
+	overflow-wrap: break-word;	
+	position: absolute;
+	TOP: 77%;
+	left:10%;
+	
+}
+
+.answer-container input {
+	height: 40px;
+	width: 400px;
+	border: 1px solid black;
+	border-radius: 3px;
+	transition: all ease 5s;
+		
+}
+.answer-container #quelle {
+	position: absolute;
+	top: 100%;
+	left: 0%;
+}
+
+.answer-container button {
+	position: relative;
+	margin: 2em;
+	padding: .5em 1em;
+	width: 8em;
+	background: transparent;
+	color: black;
+	border: 1px solid black;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all ease 2s;
+}
+
+.answer-container button:hover {
+	background: darkblue;
+	color: white;
+}
+
+h2 {
+	position: absolute;
+	top: 70%;
+	left: 10%;
+}
+
+
+
 </style>
 	
 
@@ -135,8 +184,8 @@ button {
 }
 
 	// Get the question:
-	$fragen_id = $_GET['fragen_id'];
-
+	//$fragen_id = $_GET['fragen_id'];
+	$fragen_id = 1;
 	$query = "SELECT * From fragen where ID = $fragen_id";
 
 	// Print the answers
@@ -205,6 +254,75 @@ $mysqli->close();
 	<button type = "btn"><i class="fa fa-home"></i></button>
   </form>
 </div>
+
+
+
+<?php 
+if (isset($_POST['antwort']) && isset($_POST['quelle']))
+{
+	$antwort = $_POST['antwort'];
+	$quelle = $_POST['quelle'];
+	
+
+	// Füge die Frage und das Keyword in der DB hinzu.
+	// TODO: Prüfe ob keyword schon existiert
+	// Connect to database
+	$mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
+
+	/* check connection */
+	if ($mysqli->connect_errno) {
+		printf("Connect failed: %s\n", $mysqli->connect_error);
+		exit();
+	}
+
+			/* execute multi query */
+
+			$query = "SET @key_frage = (SELECT `ID` FROM `fragen` WHERE `Fragestellung` = '$fragestellung' );
+					INSERT INTO `antworten` (`ID`, `Antworttext`, `Quelle`, `Upvote`, `Downvote`, `Serioes`, `Frage_ID`) 
+					VALUES (NULL, '$antwort', '$quelle ', NULL, NULL, NULL, @key_frage);";
+			if ($mysqli->multi_query($query)) {
+				do {
+					/* store first result set */
+					if ($result = $mysqli->store_result()) {
+						while ($row = $result->fetch_row()) {
+							//printf("%s\n", $row[0]);
+						}
+						$result->free();
+					}
+					/* print divider */
+					if ($mysqli->more_results()) {
+						//printf("-----------------\n");
+					}
+				} while ($mysqli->next_result());
+			}
+
+			
+	
+
+	
+	echo "<h2>Deine Antwort wurde erfolgreich hinzugefügt, danke dass du einen Beitrag leistest!</h2>";
+}
+
+
+
+else{
+?>
+
+<h2>Gefällt dir keine der Antworten? Gib uns deine Meinung, aber bitte mit Quelle!</h2>
+ 
+<div class="answer-container">
+   <form action="" method="post">
+      <input type="text" id="answer" placeholder="Gib bitte deine Antwort ein" name="antwort">
+	  <input type="text" id="quelle" placeholder="Gib bitte deine Quelle an" name="quelle">
+	  <!--<input type="text" placeholder="Gib bitte dein zweites Keyword ein." name="keyword2">-->
+	  <!--<input type="text" placeholder="Gib bitte dein drittes Keyword ein." name="keyword3">-->
+      <button type = "submit" name="insert" value="insert" id="insert">Einfügen</button>
+    </form>
+</div>
+<?php
+}
+?>
+
 	<script src="upvote.js"></script>
   
   
