@@ -30,10 +30,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `antworten` (
   `ID` int(11) NOT NULL,
-  `Antworttext` text NOT NULL,
-  `Quelle` text NOT NULL,
-  `Upvote` int(11) DEFAULT NULL,
-  `Downvote` int(11) DEFAULT NULL,
+  `Antworttext` varchar(32) NOT NULL,
+  `Quelle` varchar(32) NOT NULL,
+  `Upvote` int(11) DEFAULT 0,
+  `Downvote` int(11) DEFAULT 0,
   `Serioes` int(11) DEFAULT NULL,
   `Frage_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -86,7 +86,7 @@ INSERT INTO `fragen` (`ID`, `Fragestellung`) VALUES
 
 CREATE TABLE `keywords` (
   `ID` int(11) NOT NULL,
-  `Keyword` text NOT NULL
+  `Keyword` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -202,7 +202,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
----
-ALTER TABLE `antworten` CHANGE `Upvote` `Upvote` INT(11) NULL DEFAULT '0'; 
-ALTER TABLE `antworten` CHANGE `Downvote` `Downvote` INT(11) NULL DEFAULT '0'; 
-
+--
