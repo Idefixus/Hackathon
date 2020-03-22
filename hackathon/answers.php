@@ -1,12 +1,10 @@
 <?php include 'credentials.php';?>
 <!DOCTYPE html>
 <html> 
-
 <head>
 	<meta charset="UTF-8" />
 	<title>Wir gegen Corona - Deine Antworten!</title> 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 	<style>
 
 body {
@@ -164,7 +162,6 @@ h2 {
 
 
 </style>
-
 </head>
  
 <body>
@@ -173,7 +170,7 @@ h2 {
 // Get the question
 
 // Connect to database
-	$mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
+$mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
 
 	/* check connection */
 	if ($mysqli->connect_errno) {
@@ -186,10 +183,7 @@ h2 {
 }
 
 	// Get the question:
-	if (isset($_GET['fragen_id'])){
 	$fragen_id = $_GET['fragen_id'];
-	}
-	else $fragen_id = "Es muss eine Fragenid vergeben werden";
 
 	$query = "SELECT * From fragen where ID = $fragen_id";
 
@@ -210,8 +204,7 @@ h2 {
 
 <?php
 
-
-$query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle From fragen join antworten where fragen.id = antworten.Frage_ID and fragen.ID = $fragen_id ";
+$query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle, Upvote, Downvote From fragen join antworten where fragen.id = antworten.Frage_ID and fragen.ID = $fragen_id ";
 
 	// Print the answers
 	if ($result = $mysqli->query($query)) {
@@ -221,7 +214,10 @@ $query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle From fragen joi
 			$id = $row['antwort_id'];
 			$answer = $row['Antworttext'];
 			$quelle = $row['Quelle'];
-			
+			$upvote = $row['Upvote'];
+			$downvote = $row['Downvote'];
+
+			$votes = $upvote - $downvote;
 	echo "<tr>
 		<td>
 			<div class='votetable'>
@@ -230,7 +226,7 @@ $query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle From fragen joi
 			<td><button id='upvote_$id' class='arrow up' onclick='vote(1, this.id)'></button></td>
 			</tr>
 			<tr> 
-			<td align='center'><div class='number'><text id='number'><b id='score_$id' style='font-size:20px'>0</b></text></div></td>
+			<td align='center'><div class='number'><text id='number'><b id='score_$id' style='font-size:20px'>$votes</b></text></div></td>
 			</tr>
 			<tr>
 			<td><button id='downvote_$id' class='arrow down' onclick='vote(-1, this.id)'></button></td>
@@ -238,7 +234,17 @@ $query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle From fragen joi
 			</table>
 			</div>
 		</td>";
-		echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_teils.png'></td>";
+		if($votes >= 5) {
+			echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_richtig.png'></td>";
+		  } else if ($votes > 0) {
+			  echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_eher_richtig.png'></td>";
+		  } else if ($votes == 0) {
+		  echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_teils.png'></td>";
+		  } else if ($votes > -5) {
+		  echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_eher_falsch.png'></td>";
+		  } else {
+		  echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_falsch.png'></td>";
+		}
 		echo "<td>$answer</td>";
 		echo "<td><a target='_blank' href='$quelle'>$quelle</a></td>";
 		echo "</tr>";
@@ -259,8 +265,6 @@ $mysqli->close();
 	<button type = "btn"><i class="fa fa-home"></i></button>
   </form>
 </div>
-
-
 
 <?php
 
@@ -341,7 +345,7 @@ else{
 }
 ?>
 
-	<script src="upvote.js"></script>
+<script src="upvote.js"></script>
   
   
 </body>
