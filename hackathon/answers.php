@@ -196,7 +196,7 @@ $mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
 
 		$result->close();
 	}
-
+function create_table(){
 	?>
 
 <div class="answertable"> 
@@ -254,7 +254,7 @@ $result->close();
 }
 
 $mysqli->close();	
- 
+} 
  ?>
  
 </table>
@@ -265,7 +265,9 @@ $mysqli->close();
 	<button type = "btn"><i class="fa fa-home"></i></button>
   </form>
 </div>
-
+<?php
+	echo create_table();
+?>
 <?php
 
 
@@ -320,6 +322,7 @@ if (isset($_POST['antwort']) && isset($_POST['quelle']))
 
 	
 	echo "<h2>Deine Antwort wurde erfolgreich hinzugefügt, danke dass du einen Beitrag leistest!</h2>";
+	echo create_table();
 	}
 	}
 
