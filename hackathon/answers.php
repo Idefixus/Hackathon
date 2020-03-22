@@ -208,7 +208,8 @@ h2 {
 
 <?php
 
-$query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle, Upvote, Downvote From fragen join antworten where fragen.id = antworten.Frage_ID and fragen.ID = $fragen_id ";
+
+$query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle From fragen join antworten where fragen.id = antworten.Frage_ID and fragen.ID = $fragen_id ";
 
 	// Print the answers
 	if ($result = $mysqli->query($query)) {
@@ -218,10 +219,7 @@ $query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle, Upvote, Downvo
 			$id = $row['antwort_id'];
 			$answer = $row['Antworttext'];
 			$quelle = $row['Quelle'];
-			$upvote = $row['Upvote'];
-			$downvote = $row['Downvote'];
-
-			$votes = $upvote - $downvote;
+			
 	echo "<tr>
 		<td>
 			<div class='votetable'>
@@ -230,7 +228,7 @@ $query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle, Upvote, Downvo
 			<td><button id='upvote_$id' class='arrow up' onclick='vote(1, this.id)'></button></td>
 			</tr>
 			<tr> 
-			<td align='center'><div class='number'><text id='number'><b id='score_$id' style='font-size:20px'>$votes</b></text></div></td>
+			<td align='center'><div class='number'><text id='number'><b id='score_$id' style='font-size:20px'>0</b></text></div></td>
 			</tr>
 			<tr>
 			<td><button id='downvote_$id' class='arrow down' onclick='vote(-1, this.id)'></button></td>
@@ -238,17 +236,7 @@ $query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle, Upvote, Downvo
 			</table>
 			</div>
 		</td>";
-		if($votes >= 5) {
-			echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_richtig.png'></td>";
-		  } else if ($votes > 0) {
-			  echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_eher_richtig.png'></td>";
-		  } else if ($votes == 0) {
-		  echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_teils.png'></td>";
-		  } else if ($votes > -5) {
-		  echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_eher_falsch.png'></td>";
-		  } else {
-		  echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_falsch.png'></td>";
-		}
+		echo "<td><img id='button_image_$id' width='40' height='80' src='PNG/reagenzglas_teils.png'></td>";
 		echo "<td>$answer</td>";
 		echo "<td><a target='_blank' href='$quelle'>$quelle</a></td>";
 		echo "</tr>";
@@ -272,23 +260,33 @@ $mysqli->close();
 
 
 
-<?php 
+<?php
+
+
 if (isset($_POST['antwort']) && isset($_POST['quelle']))
 {
 	$antwort = $_POST['antwort'];
 	$quelle = $_POST['quelle'];
-	
+
 
 	// Füge die Frage und das Keyword in der DB hinzu.
 	// TODO: Prüfe ob keyword schon existiert
 	// Connect to database
 	$mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
-
-	/* check connection */
+		/* check connection */
 	if ($mysqli->connect_errno) {
 		printf("Connect failed: %s\n", $mysqli->connect_error);
 		exit();
 	}
+	
+	$query = "SELECT * FROM antworten WHERE Antworttext = '$antwort';";
+
+	
+	if ($result = $mysqli->query($query)) {	
+	if ($result -> num_rows){
+			echo "<h2>Du hast diese Frage schon beantwortet. Für neue Fragen kehre zur Homepage zurück</h2>";	
+	}
+	else{
 
 			/* execute multi query */
 
@@ -316,6 +314,9 @@ if (isset($_POST['antwort']) && isset($_POST['quelle']))
 
 	
 	echo "<h2>Deine Antwort wurde erfolgreich hinzugefügt, danke dass du einen Beitrag leistest!</h2>";
+	}
+	}
+
 }
 
 
