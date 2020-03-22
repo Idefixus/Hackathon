@@ -273,7 +273,7 @@ if (isset($_POST['antwort']) && isset($_POST['quelle']))
 	// Füge die Frage und das Keyword in der DB hinzu.
 	// TODO: Prüfe ob keyword schon existiert
 	// Connect to database
-	$mysqli = new mysqli("localhost", "root", "", "wissensdatenbank2");
+	$mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
 		/* check connection */
 	if ($mysqli->connect_errno) {
 		printf("Connect failed: %s\n", $mysqli->connect_error);
