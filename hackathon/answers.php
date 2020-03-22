@@ -196,7 +196,7 @@ $mysqli = new mysqli($GLOBAL_HOST, $GLOBAL_USER, $GLOBAL_PW, $GLOBAL_DB_NAME);
 
 		$result->close();
 	}
-function create_table(){
+	
 	?>
 
 <div class="answertable"> 
@@ -251,10 +251,10 @@ $query = "SELECT antworten.ID as antwort_id, Antworttext, Quelle, Upvote, Downvo
 }
 /* free result set */
 $result->close();
-}
+	}
 
 $mysqli->close();	
-} 
+ 
  ?>
  
 </table>
@@ -265,9 +265,7 @@ $mysqli->close();
 	<button type = "btn"><i class="fa fa-home"></i></button>
   </form>
 </div>
-<?php
-	echo create_table();
-?>
+
 <?php
 
 
@@ -276,7 +274,7 @@ if (isset($_POST['antwort']) && isset($_POST['quelle']))
 	$antwort = $_POST['antwort'];
 	$quelle = $_POST['quelle'];
 
-
+	if (empty($antwort) == false && empty($quelle) == false){
 	// Füge die Frage und das Keyword in der DB hinzu.
 	// TODO: Prüfe ob keyword schon existiert
 	// Connect to database
@@ -322,8 +320,12 @@ if (isset($_POST['antwort']) && isset($_POST['quelle']))
 
 	
 	echo "<h2>Deine Antwort wurde erfolgreich hinzugefügt, danke dass du einen Beitrag leistest!</h2>";
-	echo create_table();
+	
 	}
+	}
+	}
+	else{
+	echo "<h2>Bitte gebe eine Antwort ein!</h2>";
 	}
 
 }
