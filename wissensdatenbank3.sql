@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `antworten` (
   `ID` int(11) NOT NULL,
-  `Antworttext` varchar(32) NOT NULL,
-  `Quelle` varchar(32) NOT NULL,
+  `Antworttext` text NOT NULL,
+  `Quelle` text NOT NULL,
   `Upvote` int(11) DEFAULT 0,
   `Downvote` int(11) DEFAULT 0,
   `Serioes` int(11) DEFAULT NULL,
